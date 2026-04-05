@@ -1,6 +1,5 @@
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { SprayBackdrop } from "@/components/spray-backdrop";
 import { SprayDivider } from "@/components/spray-divider";
 
 export const metadata = { title: "About" };
@@ -10,15 +9,12 @@ export default function AboutPage() {
     <>
       <SiteHeader />
       <main className="flex-1 max-w-3xl w-full mx-auto px-5 md:px-8 pt-12 md:pt-16 pb-16">
-        <div className="relative inline-block mb-10">
-          <SprayBackdrop />
-          <h1
-            className="font-display text-[clamp(2.5rem,9vw,5.5rem)] text-wall px-3 py-1 relative"
-            style={{ transform: "rotate(-2deg)" }}
-          >
-            ABOUT
-          </h1>
-        </div>
+        <h1
+          className="font-display text-[clamp(2.5rem,9vw,5.5rem)] inline-block leading-[1.1] mb-10"
+          style={{ transform: "rotate(-2deg)" }}
+        >
+          <span className="spray-mark">ABOUT</span>
+        </h1>
 
         <SprayDivider className="mb-10" />
 

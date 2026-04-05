@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Rubik_Mono_One, Space_Grotesk, Fraunces, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { ThemeProvider, themeInitScript } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const display = Rubik_Mono_One({
@@ -70,9 +70,6 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${display.variable} ${heading.variable} ${body.variable} ${mono.variable}`}
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-      </head>
       <body className="min-h-screen flex flex-col">
         <ThemeProvider>{children}</ThemeProvider>
         <Analytics />

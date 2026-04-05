@@ -1,17 +1,34 @@
 "use client";
 
-import { useTheme } from "./theme-provider";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-  const { theme, toggle } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  // Render a placeholder with same width until mounted to avoid layout shift
+  if (!mounted) {
+    return (
+      <span
+        aria-hidden="true"
+        className="font-mono uppercase text-ink-muted invisible"
+      >
+        [NIGHT]
+      </span>
+    );
+  }
+
+  const isDark = resolvedTheme === "dark";
   return (
     <button
       type="button"
-      onClick={toggle}
-      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-      className="font-mono text-xs uppercase tracking-[0.15em] text-ink-muted hover:text-spray transition-colors px-2 py-1 border border-transparent hover:border-ink"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+      className="font-mono uppercase text-ink-muted hover:text-spray transition-colors"
     >
-      [{theme === "light" ? "NIGHT" : "DAY"}]
+      [{isDark ? "DAY" : "NIGHT"}]
     </button>
   );
 }

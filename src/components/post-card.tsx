@@ -16,7 +16,7 @@ export function PostCard({ post, index = 0 }: { post: PostMeta; index?: number }
         <span>[ {formatted} ]</span>
         <span>[ {post.readingTime} MIN READ ]</span>
       </div>
-      <h2 className="font-heading text-2xl md:text-3xl leading-[1.15] mb-3">
+      <h2 className="font-heading text-[1.375rem] md:text-3xl leading-[1.15] mb-3 [text-wrap:balance]">
         <Link
           href={`/posts/${post.slug}`}
           className="text-ink hover:text-spray transition-colors"

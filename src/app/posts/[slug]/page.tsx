@@ -5,7 +5,6 @@ import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { renderMDX } from "@/lib/mdx";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { SprayBackdrop } from "@/components/spray-backdrop";
 import { SprayDivider } from "@/components/spray-divider";
 import { TagSticker } from "@/components/tag-sticker";
 
@@ -76,15 +75,12 @@ export default async function PostPage({
             <span>[ {formatted} ]</span>
             <span>[ {post.readingTime} MIN READ ]</span>
           </div>
-          <div className="relative inline-block max-w-full">
-            <SprayBackdrop />
-            <h1
-              className="font-heading font-bold text-[clamp(2rem,6.5vw,4rem)] leading-[1.05] text-ink relative tracking-tight"
-              style={{ letterSpacing: "-0.02em" }}
-            >
-              {post.title}
-            </h1>
-          </div>
+          <h1
+            className="font-heading font-bold text-[clamp(2rem,6.5vw,4rem)] leading-[1.25] tracking-tight [text-wrap:balance]"
+            style={{ letterSpacing: "-0.02em" }}
+          >
+            <span className="spray-mark">{post.title}</span>
+          </h1>
           {post.description && (
             <p className="mt-6 font-body text-lg md:text-xl leading-relaxed text-ink-muted max-w-[62ch]">
               {post.description}

@@ -9,7 +9,7 @@ export const mdxComponents: MDXComponents = {
   a: ({ href = "", children, ...rest }) => {
     const isExternal = href.startsWith("http");
     const className =
-      "body-link text-ink decoration-spray decoration-2 underline underline-offset-[3px] hover:text-spray";
+      "body-link text-ink decoration-spray decoration-[2.5px] underline underline-offset-[4px] hover:bg-marker hover:text-ink transition-colors";
     if (isExternal) {
       return (
         <a href={href} target="_blank" rel="noreferrer" className={className} {...rest}>
