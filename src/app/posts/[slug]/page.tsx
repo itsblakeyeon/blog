@@ -7,6 +7,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { SprayDivider } from "@/components/spray-divider";
 import { TagSticker } from "@/components/tag-sticker";
+import { GiscusComments } from "@/components/giscus-comments";
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -102,6 +103,10 @@ export default async function PostPage({
         </article>
 
         <SprayDivider className="mt-16 mb-8" />
+
+        <section className="mb-16">
+          <GiscusComments />
+        </section>
 
         <footer className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.15em] text-ink-muted">
           <Link href="/" className="hover:text-spray">
