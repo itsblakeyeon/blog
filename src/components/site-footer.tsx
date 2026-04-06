@@ -13,9 +13,7 @@ export function SiteFooter() {
           </div>
           <div className="flex gap-5">
             <Link href="/rss.xml" className="hover:text-spray">RSS</Link>
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="hover:text-spray">GitHub</a>
-            <a href="https://twitter.com/" target="_blank" rel="noreferrer" className="hover:text-spray">X</a>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="hover:text-spray">LinkedIn</a>
+            <a href="https://github.com/itsblakeyeon" target="_blank" rel="noreferrer" className="hover:text-spray">GitHub</a>
           </div>
           <div>© {new Date().getFullYear()}</div>
         </div>

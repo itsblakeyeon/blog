@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SearchButton } from "./search-button";
 import { ThemeToggle } from "./theme-toggle";
 
 export function SiteHeader() {
@@ -16,6 +17,7 @@ export function SiteHeader() {
           <Link href="/" className="text-ink-muted hover:text-ink transition-colors">Posts</Link>
           <Link href="/tags" className="text-ink-muted hover:text-ink transition-colors">Tags</Link>
           <Link href="/about" className="text-ink-muted hover:text-ink transition-colors">About</Link>
+          <SearchButton />
           <ThemeToggle />
         </nav>
       </div>

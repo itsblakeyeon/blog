@@ -3,6 +3,8 @@ import { Rubik_Mono_One, Space_Grotesk, Fraunces, JetBrains_Mono } from "next/fo
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SearchDialog } from "@/components/search-dialog";
+import { getAllPostMeta } from "@/lib/posts";
 import "./globals.css";
 
 const display = Rubik_Mono_One({
@@ -64,6 +66,8 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const posts = getAllPostMeta();
+
   return (
     <html
       lang="en"
@@ -71,7 +75,10 @@ export default function RootLayout({
       className={`${display.variable} ${heading.variable} ${body.variable} ${mono.variable}`}
     >
       <body className="min-h-screen flex flex-col">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <SearchDialog posts={posts} />
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>
