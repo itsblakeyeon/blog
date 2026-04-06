@@ -13,7 +13,7 @@ export function SiteHeader() {
         >
           BLAKE
         </Link>
-        <nav className="flex items-center gap-2.5 sm:gap-4 md:gap-5 font-mono text-[10px] sm:text-[11px] md:text-xs uppercase tracking-[0.1em] md:tracking-[0.15em]">
+        <nav className="flex items-center gap-2.5 sm:gap-4 md:gap-5 font-heading text-[10px] sm:text-[11px] md:text-xs uppercase tracking-[0.1em] md:tracking-[0.15em] font-medium">
           <Link href="/" className="text-ink-muted hover:text-ink transition-colors">Posts</Link>
           <Link href="/tags" className="text-ink-muted hover:text-ink transition-colors">Tags</Link>
           <Link href="/about" className="text-ink-muted hover:text-ink transition-colors">About</Link>

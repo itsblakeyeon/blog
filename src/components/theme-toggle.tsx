@@ -13,7 +13,7 @@ export function ThemeToggle() {
     return (
       <span
         aria-hidden="true"
-        className="font-mono uppercase text-ink-muted invisible"
+        className="uppercase text-ink-muted invisible"
       >
         [NIGHT]
       </span>
@@ -26,7 +26,7 @@ export function ThemeToggle() {
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
-      className="font-mono uppercase text-ink-muted hover:text-spray transition-colors"
+      className="uppercase text-ink-muted hover:text-spray transition-colors"
     >
       [{isDark ? "DAY" : "NIGHT"}]
     </button>

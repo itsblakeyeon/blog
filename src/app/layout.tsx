@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Rubik_Mono_One, Space_Grotesk, Fraunces, JetBrains_Mono } from "next/font/google";
+import { Jost, Fraunces, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -7,15 +7,16 @@ import { SearchDialog } from "@/components/search-dialog";
 import { getAllPostMeta } from "@/lib/posts";
 import "./globals.css";
 
-const display = Rubik_Mono_One({
+const display = Jost({
   variable: "--font-display-var",
-  weight: "400",
+  weight: ["700", "900"],
   subsets: ["latin"],
   display: "swap",
 });
 
-const heading = Space_Grotesk({
+const heading = Jost({
   variable: "--font-heading-var",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
 });

@@ -13,7 +13,7 @@ export default function HomePage() {
       <main className="flex-1 max-w-5xl w-full mx-auto px-5 md:px-8">
         <section className="pt-16 md:pt-24 pb-12 relative">
           <h1
-            className="font-display text-[clamp(3.2rem,11vw,6.5rem)] leading-[1.1] inline-block"
+            className="font-display font-black text-[clamp(3.2rem,11vw,6.5rem)] leading-[1.1] inline-block"
             style={{ transform: "rotate(-2deg)" }}
           >
             <span className="spray-mark">BLAKE</span>

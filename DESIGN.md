@@ -28,8 +28,8 @@ This mirrors Supreme's formula: iconic wordmark, understated product underneath.
 
 | Role | Font | Why |
 |---|---|---|
-| **Display** (H1, brand mark) | **Rubik Mono One** (Google Fonts) | Stencil-block bold, geometric, free, reads as "tag" |
-| **Heading** (H2-H4) | **Space Grotesk** (Google Fonts) | Industrial sans with monospace DNA, "maker" feel |
+| **Display** (H1, brand mark) | **Jost** 900 (Google Fonts) | Futura-style geometric sans, bold, clean |
+| **Heading** (H2-H4) | **Jost** 500-700 (Google Fonts) | Same family, lighter weights for hierarchy |
 | **Body** | **Fraunces** (Google Fonts, italic variant pairs well) | Warm editorial serif, serious reading |
 | **Mono** (code, meta) | **JetBrains Mono** (Google Fonts) | Code, dates, tags, `[BRACKETED]` meta |
 
@@ -61,7 +61,7 @@ This mirrors Supreme's formula: iconic wordmark, understated product underneath.
 --wall-deep:  #E8E2D4;  /* kraft / muted */
 --ink:        #171614;  /* primary text */
 --ink-muted:  #6B6560;  /* secondary / meta */
---spray:      #FF3D2E;  /* supreme-red accent */
+--spray:      #0D9488;  /* teal accent */
 --tag:        #2D4BFF;  /* urban blue */
 --marker:     #D4FF00;  /* neon highlighter */
 ```
@@ -73,7 +73,7 @@ This mirrors Supreme's formula: iconic wordmark, understated product underneath.
 --wall-deep:  #1A1815;  /* tunnel */
 --ink:        #F4F1EB;  /* paper white */
 --ink-muted:  #8A847C;
---spray:      #FF5445;
+--spray:      #2DD4BF;
 --tag:        #5E78FF;
 --marker:     #E3FF1F;
 ```

@@ -8,8 +8,8 @@
 @theme inline {
   /* Fonts — literal names so Tailwind v4 @theme inline resolves correctly.
      Runtime variables are injected via next/font on <html>. */
-  --font-display: "Rubik Mono One", "Rubik Mono One Fallback", ui-monospace, monospace;
-  --font-heading: "Space Grotesk", "Space Grotesk Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Jost", "Jost Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Jost", "Jost Fallback", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Fraunces", "Fraunces Fallback", ui-serif, Georgia, serif;
   --font-mono: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, monospace;
 
@@ -31,7 +31,7 @@
   --wall-deep: #e8e2d4;
   --ink: #171614;
   --ink-muted: #6b6560;
-  --spray: #ff3d2e;
+  --spray: #0d9488;
   --tag: #2d4bff;
   --marker: #d4ff00;
 }
@@ -43,7 +43,7 @@
   --wall-deep: #1a1815;
   --ink: #f4f1eb;
   --ink-muted: #8a847c;
-  --spray: #ff5445;
+  --spray: #2dd4bf;
   --tag: #5e78ff;
   --marker: #e3ff1f;
 }
@@ -127,19 +127,20 @@ h6 {
    spray band. Includes subtle noise for rough-edge feel.
    ============================================================ */
 .spray-mark {
+  display: inline;
   background: var(--spray);
-  color: #ffffff;  /* pure white for AA-large contrast on spray-red */
+  color: #ffffff;  /* pure white for AA-large contrast on teal */
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  padding: 0.08em 0.3em 0.12em;
-  margin: 0 -0.1em;
+  padding: 0.06em 0.25em 0.1em;
+  line-height: 1.4;
   /* subtle spray-edge via layered texture */
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cfilter id='r'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='5'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.2 -0.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23r)' opacity='0.12'/%3E%3C/svg%3E"),
     linear-gradient(var(--spray), var(--spray));
 }
 
-/* Dark-mode spray is lighter (#FF5445) — darker text for contrast */
+/* Dark-mode spray is lighter (#2DD4BF) — darker text for contrast */
 .dark .spray-mark,
 :root[data-theme="dark"] .spray-mark {
   color: #0e0d0b;
