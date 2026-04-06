@@ -14,6 +14,8 @@ export function SiteFooter() {
           <div className="flex gap-5">
             <Link href="/rss.xml" className="hover:text-spray">RSS</Link>
             <a href="https://github.com/itsblakeyeon" target="_blank" rel="noreferrer" className="hover:text-spray">GitHub</a>
+            <a href="https://x.com/itsblakeyeon" target="_blank" rel="noreferrer" className="hover:text-spray">X</a>
+            <a href="https://www.linkedin.com/in/itsblakeyeon" target="_blank" rel="noreferrer" className="hover:text-spray">LinkedIn</a>
           </div>
           <div>© {new Date().getFullYear()}</div>
         </div>

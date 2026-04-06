@@ -45,6 +45,16 @@ export default function AboutPage() {
               </a>
             </li>
             <li>
+              <a href="https://x.com/itsblakeyeon" target="_blank" rel="noreferrer" className="text-ink hover:text-spray underline decoration-spray decoration-2 underline-offset-[3px]">
+                x (twitter) →
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/itsblakeyeon" target="_blank" rel="noreferrer" className="text-ink hover:text-spray underline decoration-spray decoration-2 underline-offset-[3px]">
+                linkedin →
+              </a>
+            </li>
+            <li>
               <a href="/rss.xml" className="text-ink hover:text-spray underline decoration-spray decoration-2 underline-offset-[3px]">
                 rss feed →
               </a>
